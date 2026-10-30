@@ -127,8 +127,8 @@
 
     .bouncing-heart-trigger {
       position: absolute;
-      bottom: 80px;
-      left: 42%;
+      bottom: 30px;
+      left: 50%;
       transform: translateX(-50%);
       font-size: 75px;
       cursor: pointer;
@@ -339,11 +339,11 @@
       transform: translate(-50%, -50%) scale(1) rotate(0deg) !important;
       z-index: 999 !important;
       width: fit-content !important;
-      max-width: 82vw !important;
+      max-width: 92vw !important;
       height: auto !important;
-      padding: 8px 8px 18px 8px !important;
+      padding: 10px 10px 20px 10px !important;
       box-shadow: 0 25px 50px rgba(255, 105, 180, 0.35) !important;
-      border-radius: 6px;
+      border-radius: 8px;
       animation: none !important;
       opacity: 1 !important;
       display: flex;
@@ -354,16 +354,16 @@
     .polaroid.active img {
       width: auto !important;
       max-width: 100% !important;
-      max-height: 60vh !important;
+      max-height: 75vh !important;
       object-fit: contain !important;
-      border-radius: 4px;
+      border-radius: 6px;
       background-color: #ffffff;
     }
 
     .polaroid.active .caption {
       opacity: 1;
       max-height: 80px;
-      margin-top: 8px;
+      margin-top: 10px;
       font-size: 14px;
     }
 
@@ -440,7 +440,7 @@
       <img id="matchImg" src="ไม้ขีด.png" alt="ไม้ขีด">
     </div>
 
-    <div class="bouncing-heart-trigger" id="heartTrigger">💖</div>
+    <button class="bouncing-heart-trigger" id="heartTrigger">💖</button>
 
     <div class="big-heart-modal" id="heartModal">
       <div class="big-heart-container" id="bigHeartContainer">
@@ -825,13 +825,13 @@
       }, 120);
     }
 
-    /* ข้อมูลรูปภาพ photo1.jpg - photo5.jpg พร้อมข้อความใหม่ */
+    /* ข้อมูลรูปภาพ photo1.jpg - photo5.jpg พร้อมปรับตำแหน่งใหม่ให้สมดุลไม่กองไปซ้าย */
     const polaroidData = [
-      { img: 'photo1.jpg', text: 'เป็นรูปแรกที่ได้ถ่าย<br>ให้คนที่แอบชอบตั้งแต่แรก', top: '8%', left: '6%', rotate: '-9deg', duration: '1.8s', delay: '0s' },
-      { img: 'photo2.jpg', text: 'รักตัวเล็กมากๆ', top: '10%', left: '56%', rotate: '8deg', duration: '2.4s', delay: '0.4s' },
-      { img: 'photo3.jpg', text: 'รูปถ่ายคู่กันรูปแรก', top: '38%', left: '30%', rotate: '-3deg', duration: '1.6s', delay: '0.2s' },
-      { img: 'photo4.jpg', text: 'ได้มาเที่ยวบ้านครั้งแรก', top: '60%', left: '8%', rotate: '7deg', duration: '2.2s', delay: '0.6s' },
-      { img: 'photo5.jpg', text: 'อยู่ด้วยกันนานๆนะ', top: '62%', left: '54%', rotate: '-6deg', duration: '2.0s', delay: '0.3s' }
+      { img: 'photo1.jpg', text: 'เป็นรูปแรกที่ได้ถ่าย<br>ให้คนที่แอบชอบตั้งแต่แรก', top: '10%', left: '12%', rotate: '-7deg', duration: '1.8s', delay: '0s' },
+      { img: 'photo2.jpg', text: 'รักตัวเล็กมากๆ', top: '12%', left: '52%', rotate: '6deg', duration: '2.4s', delay: '0.4s' },
+      { img: 'photo3.jpg', text: 'รูปถ่ายคู่กันรูปแรก', top: '38%', left: '32%', rotate: '-3deg', duration: '1.6s', delay: '0.2s' },
+      { img: 'photo4.jpg', text: 'ได้มาเที่ยวบ้านครั้งแรก', top: '58%', left: '10%', rotate: '5deg', duration: '2.2s', delay: '0.6s' },
+      { img: 'photo5.jpg', text: 'อยู่ด้วยกันนานๆนะ', top: '60%', left: '54%', rotate: '-5deg', duration: '2.0s', delay: '0.3s' }
     ];
 
     function showPolaroidsSimultaneously() {
